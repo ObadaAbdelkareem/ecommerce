@@ -1,0 +1,112 @@
+.grid-container--4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(165px, 1fr));
+  margin: 0px;
+  /* padding: 0px 10px 0 10px; */
+}
+
+.grid-container--3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(165px, 1fr));
+  margin: 0px;
+  /* padding: 0px 10px 0 10px; */
+}
+.grid-container--2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(165px, 1fr));
+
+  margin: 0px;
+  /* padding: 0px 10px 0 10px; */
+}
+.grid-container--1 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(165px, 1fr));
+
+  margin: 0px;
+  /* padding: 0px 10px 0 10px; */
+}
+
+.grid-item__small {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+
+  font-size: 30px;
+  text-align: center;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  padding: 1rem;
+  font-size: 30px;
+  text-align: center;
+}
+
+.c-offer {
+  position: relative;
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.3s ease-out;
+  min-height: 100%;
+  display:flex;
+  flex-direction: column;
+}
+
+.c-offer img{
+    position: relative;
+    width:200px;
+    height:250px !important;
+}
+.c-offer__media {
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  flex: 50%
+}
+
+.c-offer-detail {
+  text-align: left;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top:2rem;
+  font-size: 16px;
+  flex:50%
+}
+
+.c-offer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top:1rem;
+}
+
+.c-offer-action {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.c-offer-column {
+  flex: 50%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+.c-offer-price {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+.c-offer-button {
+  flex: 75%;
+  max-width: 75%;
+  text-align: right;
+}
+.list-style {
+  list-style: none;
+}
