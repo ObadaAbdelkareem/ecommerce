@@ -62,6 +62,7 @@ export default {
     methods:{
       showProductItem(){
         this.$emit("showProductModal",this.product)
+        debugger
       },
 
       addToCart(){

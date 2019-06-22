@@ -3,24 +3,39 @@
     <md-dialog :md-active.sync="showModal" class="c-login-modal">
     <div>
       <md-field>
-        <md-input placeholder="Username" v-model="initial"></md-input>
+        <md-input placeholder="Username" v-model="username"></md-input>
       </md-field>
     </div>
     <div>
       <md-field>
-        <md-input placeholder="Password" v-model="initial"></md-input>
+        <md-input placeholder="Password" v-model="password"></md-input>
       </md-field>
     </div>
       <md-dialog-actions>
-        <md-button class="md-primary" @click="showDialog = false">Login</md-button>
+        <md-button class="md-primary" @click="login">Login</md-button>
       </md-dialog-actions>
     </md-dialog>
   </div>
 </template>
 <script>
 export default {
+  data(){
+    return{
+      username:null,
+      password:null,
+    }
+  },
   props: {
     showModal: Boolean
+  },
+
+  methods:{
+    login(){
+      this.$store.dispatch("signIn",{
+        username:this.username,
+        password:this.password
+      })
+    }
   }
 };
 </script>

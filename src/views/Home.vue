@@ -36,7 +36,7 @@
         </li>
       </ul>
     </section>
-
+    <alert :showAlert="alertFlag"></alert>
     <product-modal :showModal="productFlag" :product="productItem" @addToCart="addProductToCart"></product-modal>
   </div>
 </template>
@@ -47,6 +47,7 @@ import item from "@/components/product";
 import itemLarge from "@/components/product/item-large.vue";
 import homeHeader from "@/components/header.vue";
 import productModal from "@/components/modal/product-view.vue";
+import alert from "@/components/modal/alert.vue";
 import { mapGetters } from "vuex";
 
 export default {
@@ -55,17 +56,19 @@ export default {
     item,
     itemLarge,
     homeHeader,
-    productModal
+    productModal,
+    alert
   },
   data() {
     return {
       productFlag: false,
       cartFlag: false,
-      productItem: null
+      productItem: null,
+      alertFlag:false
     };
   },
   computed: {
-    ...mapGetters(["products"]),
+    ...mapGetters(["products", "authintcatedUser"]),
 
     /**
      * to get filtered Array of products to get second and third element
@@ -86,8 +89,19 @@ export default {
 
   methods: {
     showProductModal(product) {
-      this.productItem = product;
-      this.productFlag = true;
+      if (
+        this.authintcatedUser != null&&
+        (this.authintcatedUser.role === "normal" ||
+          this.authintcatedUser.role === "admin")
+      ) {
+        this.productItem = product;
+        this.productFlag = true;
+        this.cartFlag = false;
+      }else{
+        this.alertFlag =true
+        debugger
+      }
+      
     },
 
     addProductToCart(product) {
@@ -95,6 +109,7 @@ export default {
         product: product
       });
       this.cartFlag = true;
+      this.productFlag = false;
     }
   }
 };

@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id":0,
+      "id": 0,
       "name": "Comba Leather And Suede Trainers",
       "description": "These classic and sport-inspired Lacoste Trainers crafted in leather and suede are enlivened with colored bands on the sides. A winning style for summer strolls.",
       "rate": "3.5",
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "id":1,
+      "id": 1,
       "name": "Comba Leather And Suede Trainers",
       "description": "These classic and sport-inspired Lacoste Trainers crafted in leather and suede are enlivened with colored bands on the sides. A winning style for summer strolls.",
       "rate": "4.5",
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "id":2,
+      "id": 2,
       "name": "Comba Leather And Suede Trainers",
       "description": "These classic and sport-inspired Lacoste Trainers crafted in leather and suede are enlivened with colored bands on the sides. A winning style for summer strolls.",
       "rate": "5",
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "id":3,
+      "id": 3,
       "name": "Comba Leather And Suede Trainers",
       "description": "These classic and sport-inspired Lacoste Trainers crafted in leather and suede are enlivened with colored bands on the sides. A winning style for summer strolls.",
       "rate": "3",
@@ -65,7 +65,7 @@
       ]
     },
     {
-      "id":4,
+      "id": 4,
       "name": "Comba Leather And Suede Trainers",
       "description": "These classic and sport-inspired Lacoste Trainers crafted in leather and suede are enlivened with colored bands on the sides. A winning style for summer strolls.",
       "rate": "4",
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "id":5,
+      "id": 5,
       "name": "Comba Leather And Suede Trainers",
       "description": "These classic and sport-inspired Lacoste Trainers crafted in leather and suede are enlivened with colored bands on the sides. A winning style for summer strolls.",
       "rate": "3.5",
@@ -95,6 +95,23 @@
         "https://images.pexels.com/photos/35191/shoes-leather-single-fashion.jpg?cs=srgb&dl=brown-casual-comfort-35191.jpg&fm=jpg",
         "https://images.pexels.com/photos/54334/running-shoe-shoe-brooks-highly-functional-54334.jpeg?cs=srgb&dl=footwear-shoe-sneakers-54334.jpg&fm=jpg"
       ]
+    }
+  ],
+
+  "users": [
+    {
+      "name": "obada Admin",
+      "username":"ObadaAdmin",
+      "role": "admin",
+      "id": 1,
+      "password":123
+    },
+    {
+      "name": "obada normal user",
+      "role": "normal",
+      "username":"ObadaNormal",
+      "id": 1,
+      "password":321
     }
   ]
 }

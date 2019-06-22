@@ -4,17 +4,23 @@
       <li class="c-logo">
         <img src="../assets/logo_2.png">
       </li>
-
+      
+      <li style="flex:50%">
+        <span><strong>{{authintcatedUser ? authintcatedUser.name:null}}</strong></span>
+      </li>
       <li class="c-login-btn c-header__action" style="text-align: right;">
-        <div>
+        <div v-if="authintcatedUser == null || authintcatedUser == 'undefined' ">
           <md-button class="md-raised md-primary" @click="loginFlag= !loginFlag">Login</md-button>
+        </div>
+        <div v-if="authintcatedUser ? true:false">
+          <md-button class="md-raised md-primary" @click="logout">Logout</md-button>
         </div>
       </li>
       <li class="c-cart-btn c-header__action" style="text-align: left;position:relative;">
         <div class="c-shopping__icon" @click="cartFlag=!cartFlag">
           <md-icon >shopping_cart</md-icon>
         </div>
-        <span class="c-cart-items">0</span>
+        <span class="c-cart-items">{{cart.length}}</span>
         <cart :showCart="cartFlag"></cart>
       </li>
     </ul>
@@ -25,6 +31,7 @@
 <script>
 import login from "@/components/modal/login";
 import cart from "@/components/cart";
+import { mapGetters } from "vuex";
 export default {
   props: {
     cartFlag: Boolean
@@ -35,9 +42,24 @@ export default {
       cartFlag: false
     };
   },
+  computed: {
+    ...mapGetters(["cart","loginModalFlag","authintcatedUser"])
+  },
   components: {
     login,
     cart
+  },
+  methods:{
+    logout(){
+      this.$store.dispatch("signOut");
+    }
+  },
+  watch:{
+    loginModalFlag(newVal,oldVal){
+      debugger
+      if(newVal === true)
+        this.loginFlag=false
+    }
   }
 };
 </script>

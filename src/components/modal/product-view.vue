@@ -39,13 +39,29 @@
             <div class="c-content__item_space">
               <span>color</span>
             </div>
-            <div style="margin-left: 3rem;">1</div>
+            <div style="margin-left: 3.5rem;">
+              <md-icon>fiber_manual_record</md-icon>
+            </div>
+            <div style="margin-left: 1rem;">
+              <md-icon>fiber_manual_record</md-icon>
+            </div>
+            <div style="margin-left: 1rem;">
+              <md-icon>fiber_manual_record</md-icon>
+            </div>
           </div>
           <div class="c-item__icons">
             <div class="c-content__item_space">
               <span>Select Size</span>
             </div>
-            <div style="margin-left: 3rem;">1</div>
+             <div style="margin-left: 1rem;">
+              <md-icon>fiber_manual_record</md-icon>
+            </div>
+            <div style="margin-left: 1rem;">
+              <md-icon>fiber_manual_record</md-icon>
+            </div>
+            <div style="margin-left: 1rem;">
+              <md-icon>fiber_manual_record</md-icon>
+            </div>
           </div>
 
           <md-tabs md-dynamic-height style="margin-top:2rem">
