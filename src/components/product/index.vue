@@ -13,7 +13,7 @@
       <hr>
       <div class="c-offer-action">
         <div class="c-offer-price">
-          <div>{{product.price}} $</div>
+          <div>${{product.price}}</div>
         </div>
         <div class="c-offer-button">
           <md-button class="md-raised md-primary" @click="addToCart">Add To Cart</md-button>

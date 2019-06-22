@@ -1,50 +1,14 @@
 <template>
-  <div>
-    <md-dialog :md-active.sync="showModal">
-      <!-- old style
-          <section class="c-section__list c-list__modal">
-        <ul class="list-style grid-container--2 " style="padding-left:0">
-          <li class="grid-item c-image__view" >
-            <div class="c-image__large">
-                <img  style="max-width:100%" :src="product.featuredPhoto">
-            </div>
-            <div class="c-image__list">
-                <div class="c-vertical-image__list">
-                    <div>
-                        <img  style="max-width:50%" :src="product.featuredPhoto">
-                    </div>
-                     <div>
-                        <img  style="max-width:50%" :src="product.featuredPhoto">
-                    </div>
-                     <div>
-                        <img  style="max-width:50%" :src="product.featuredPhoto">
-                    </div>
-                     <div>
-                        <img  style="max-width:50%" :src="product.featuredPhoto">
-                    </div>
-                </div>
-            </div>
-          </li>
-          <li class="grid-item">
-            <div>obada2</div>
-          </li>
-        </ul>
-
-      </section>-->
-
+  <div class="test">
+    <md-dialog :md-active.sync="showModal" class="c-prod-modal">
       <div class="c-content__modal">
-        <!--style="display:flex;height: 431px;width: 774px;overflow:auto;"-->
         <div class="c-image__container">
-          <!--style="flex:50%;"-->
           <div style="height:100%; display:flex;">
             <div class="c-iamge__view">
-              <!--style="flex:50%"-->
-              <img style="height: 50%;" :src="selectedPhoto">
+              <img :src="selectedPhoto">
             </div>
             <div class="c-list-image__conatiner">
-              <!--style="flex:50%;text-align: right;"-->
               <ul class="list-style c-vertical-image__list">
-                <!--style="display:flex; flex-direction:column; justify-content: space-around;"-->
                 <li
                   v-for="(image,index) in product.photos"
                   @click="getSelectedPhoto(index)"
@@ -57,14 +21,12 @@
           </div>
         </div>
         <div class="c-content__item">
-          <!--style="flex:50%;margin:2rem;"-->
           <div class="c-content__item_space">
             <span>
               <strong>{{product.name}}</strong>
             </span>
           </div>
           <div class="c-item_row">
-            <!--style="display:flex;margin-top:2rem;justify-content: space-between;align-items: center;"-->
             <div class="c-content__item_space">
               <span>{{product.price}} $</span>
             </div>
@@ -151,22 +113,13 @@ export default {
 
 .c-content__modal {
   display: flex;
-  height: 431px;
-  width: 774px;
+  height: 432px;
+  width: 100%;
   overflow: auto;
 }
 
 .c-image__container {
   flex: 50%;
-}
-
-.c-iamge__view {
-  flex: 50%;
-}
-
-.c-list-image__conatiner {
-  flex: 50%;
-  text-align: right;
 }
 
 .c-image__small {
@@ -176,11 +129,6 @@ export default {
 }
 .c-image__small:hover {
   cursor: pointer;
-}
-
-.c-content__item {
-  flex: 50%;
-  margin: 2rem;
 }
 
 .c-content__item_space {
@@ -208,9 +156,6 @@ export default {
   margin-top: 1rem;
   align-items: center;
 }
-/* .c-image__view {
-  display: flex;
-} */
 
 .c-image__large {
   flex: 75%;
@@ -220,7 +165,42 @@ export default {
   flex: 25%;
 }
 
-.md-dialog {
+.c-prod-modal {
   max-height: 100% !important;
+  min-width: 894px;
+  padding: 25px 15px 15px;
 }
+
+.c-prod-modal .c-content__item {
+  flex: 1 1 40%;
+  max-width: 40%;
+}
+
+.c-prod-modal .c-list-image__conatiner {
+  flex: 1 1 88px;
+  max-width: 88px;
+  margin-right: 15px;
+  margin-left: 25px;
+}
+
+.c-prod-modal .c-list-image__conatiner ul {
+  padding: 0;
+  margin: 0;
+}
+
+.c-prod-modal .c-list-image__conatiner li {
+  margin-bottom: 16px;
+}
+.c-prod-modal .c-list-image__conatiner li img {
+    min-height: 82px;
+}
+
+.c-prod-modal .c-iamge__view {
+    flex: 1 1 auto;
+    max-width: calc(100% - 128px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 </style>

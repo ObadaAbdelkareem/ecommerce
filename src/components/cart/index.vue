@@ -63,7 +63,7 @@ export default {
   position: absolute;
   z-index: 11;
   top: 45px;
-  left: -197px;
+  left: -174px;
   display: flex;
   flex-direction: column;
   width: 260px;

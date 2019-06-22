@@ -1,12 +1,12 @@
 <template>
   <div >
-    <md-dialog :md-active.sync="showModal">
-    <div style="margin:1rem;">
+    <md-dialog :md-active.sync="showModal" class="c-login-modal">
+    <div>
       <md-field>
         <md-input placeholder="Username" v-model="initial"></md-input>
       </md-field>
     </div>
-    <div style="margin:1rem;">
+    <div>
       <md-field>
         <md-input placeholder="Password" v-model="initial"></md-input>
       </md-field>
@@ -26,7 +26,11 @@ export default {
 </script>
 <style scoped>
 .md-field{
-    border: 1px solid #e1e1e1;
+  border: 1px solid #e1e1e1;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.05);
+}
+.c-login-modal.md-dialog {
+  width: 400px;
+  height: 320px;
 }
 </style>

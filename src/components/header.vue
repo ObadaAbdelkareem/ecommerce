@@ -2,48 +2,19 @@
   <div>
     <ul class="list-style c-header">
       <li class="c-logo">
-        <img style="width:20%;margin-top: 1rem;" src="../assets/logo_2.png">
+        <img src="../assets/logo_2.png">
       </li>
 
-      <li class="c-header__action" style="text-align: right;">
+      <li class="c-login-btn c-header__action" style="text-align: right;">
         <div>
           <md-button class="md-raised md-primary" @click="loginFlag= !loginFlag">Login</md-button>
         </div>
       </li>
-      <li class="c-header__action" style="text-align: left;position:relative;">
+      <li class="c-cart-btn c-header__action" style="text-align: left;position:relative;">
         <div class="c-shopping__icon" @click="cartFlag=!cartFlag">
           <md-icon >shopping_cart</md-icon>
-          <!-- <md-button class="md-raised md-primary" @click="cartFlag=!cartFlag">cart</md-button> -->
         </div>
-        <!-- <div style="background-color: white;position:absolute;z-index: 11;top: 56px;left: -159px; display:block;width: 200px;  border: 1px solid #e1e1e1;box-shadow: 2px 1px 11px 2px rgba(0, 0, 0, 0.05);">
-         
-          <ul class="list-style" style="display:flex;justify-content: space-between;padding-left:0;align-items: center;margin-top:1rem;">
-            <li style="text-align: center;flex: 50%;">
-                <img style="width:50%;" src="../assets/logo_2.png">
-            </li>
-            <li style="text-align: left;flex: 50%;">
-                <div style="display:flex;flex-direction: column;">
-                    <span><strong>obada</strong></span>
-                    <span><strong>obada</strong></span>
-                    <span><strong>$40</strong></span>
-                </div>
-            </li>
-          </ul>
-
-          <hr style="width:90%;display:block;margin-right:auto;margin-left:auto;">
-
-           <ul class="list-style" style="display:flex;justify-content: space-between;padding-left:0;align-items: center;margin-top:1rem;">
-            <li style="text-align: center;flex: 50%;">
-                <img style="width:50%;" src="../assets/logo_2.png">
-            </li>
-            <li style="text-align: left;flex: 50%;">
-                obada
-            </li>
-          </ul>
-
-          <hr style="width:90%;display:block;margin-right:auto;margin-left:auto;">
-
-        </div>-->
+        <span class="c-cart-items">0</span>
         <cart :showCart="cartFlag"></cart>
       </li>
     </ul>
@@ -81,11 +52,16 @@ export default {
   border: 1px solid #e1e1e1;
   box-shadow: 2px 1px 11px 2px rgba(0, 0, 0, 0.05);
   padding: 0.5rem;
+  height: 72px;
 }
 
 .c-logo {
   flex: 50%;
   text-align: center;
+}
+
+.c-logo img {
+  width: 142px;
 }
 
 .c-header__action {
@@ -98,4 +74,23 @@ export default {
 .c-shopping__icon:hover{
   cursor: pointer;
 }
+
+.c-login-btn button.md-button.md-raised.md-primary {
+    background: white;
+    color: #448aff;
+    text-transform: capitalize;
+    font-size: 14px;
+    letter-spacing: 1px;
+    box-shadow: none;
+    border: 2px solid #448aff;
+    border-radius: 6px;
+    padding: 4px 12px;
+    height: 30px;
+    width: auto;
+}
+
+.c-cart-btn .md-icon.md-icon-font {
+  font-size: 36px !important;
+}
+
 </style>

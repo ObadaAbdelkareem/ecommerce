@@ -41,6 +41,10 @@
   text-align: center;
 }
 
+.list-style .grid-item:first-child {
+  padding-right: 30px;
+}
+
 .c-offer {
   position: relative;
   background: #fff;
@@ -56,15 +60,16 @@
 
 .c-offer img{
     position: relative;
-    width:200px;
-    height:250px !important;
+    width:100%;
+    height:200px !important;
 }
 .c-offer__media {
   position: relative;
   overflow: hidden;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  flex: 50%
+  flex: 50%;
+  padding: 0 16px;
 }
 
 .c-offer-detail {
@@ -73,7 +78,7 @@
   margin-right: 1rem;
   margin-top:2rem;
   font-size: 16px;
-  flex:50%
+  flex:50%;
 }
 
 .c-offer-row {
@@ -101,6 +106,7 @@
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;
+  white-space: nowrap;
 }
 .c-offer-button {
   flex: 75%;
@@ -109,4 +115,70 @@
 }
 .list-style {
   list-style: none;
+}
+
+.list-style .img-large{ 
+  padding-left: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.list-style .item-description__large {
+  padding-left: 22px;
+  padding-right: 6px;
+}
+
+.c-login-modal .md-dialog-container {
+  padding: 56px;
+}
+
+.c-login-modal .md-dialog-container input {
+  padding: 0px 6px 12px 12px;
+}
+
+.c-login-modal .md-dialog-container button {
+  width: 100%;
+  background-color: #448aff;
+  height: 48px;
+  border: 1px solid #444;
+}
+
+.c-login-modal .md-dialog-container button .md-button-content {
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 0.8px;
+  font-size: 16px;
+}
+
+.c-login-modal .md-dialog-container .md-dialog-actions {
+  padding: 0;
+}
+
+.c-cart__container:before {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 13px;
+  opacity: 0.9;
+}
+
+span.c-cart-items {
+  background: #f03142;
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 14px;
+  line-height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -14px;
+  left: 65px;
+  color: white;
+  font-size: 12px;
 }
