@@ -52,6 +52,7 @@ export default {
   methods:{
     logout(){
       this.$store.dispatch("signOut");
+      this.cartFlag=false
     }
   },
   watch:{

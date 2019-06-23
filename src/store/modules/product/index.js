@@ -59,10 +59,15 @@ const mutations = {
       state.cart.splice(0,0, product);
     }
     console.log('carts',state.cart)
+  },
+
+  clearCart(state){
+    state.cart =[];
   }
 };
 
 export default {
+  
   state,
   getters,
   actions,

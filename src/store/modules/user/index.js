@@ -35,8 +35,11 @@ const actions = {
    *
    * Sign Out  and clear authintcatedUser state 
    */
-  signOut({ commit }) {
+  signOut({ commit ,rootState}) {
+        console.log('root state',rootState.product.cart)
+        rootState.product.cart=[];
         commit("logout");
+        // commit("product/clearCart");
   }
 };
 
@@ -54,6 +57,8 @@ const mutations = {
   logout(state){
     state.authintcatedUser=null
     state.loginModalFlag= false
+    // context.rootState.product.cart=[];
+
   }
 };
 

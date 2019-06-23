@@ -36,7 +36,7 @@
         </li>
       </ul>
     </section>
-    <alert :showAlert="alertFlag"></alert>
+    <alert :showAlert="alertFlag" @hideAlert="hideAlertLogin"></alert>
     <product-modal :showModal="productFlag" :product="productItem" @addToCart="addProductToCart"></product-modal>
   </div>
 </template>
@@ -99,17 +99,28 @@ export default {
         this.cartFlag = false;
       }else{
         this.alertFlag =true
+        this.cartFlag = false;
         debugger
       }
       
     },
 
+    hideAlertLogin(){
+      this.alertFlag =false
+    },
     addProductToCart(product) {
-      this.$store.dispatch("addProductToCart", {
+      if (this.authintcatedUser != null&&(this.authintcatedUser.role === "normal" || this.authintcatedUser.role === "admin")) 
+      {
+        this.$store.dispatch("addProductToCart", {
         product: product
       });
       this.cartFlag = true;
       this.productFlag = false;
+      }else {
+        this.alertFlag =true
+        this.cartFlag = false;
+      }
+      
     }
   }
 };

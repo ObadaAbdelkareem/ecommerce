@@ -7,8 +7,8 @@
       </md-field>
     </div>
     <div>
-      <md-field>
-        <md-input placeholder="Password" v-model="password"></md-input>
+      <md-field :md-toggle-password="false">
+        <md-input type="password" placeholder="Password" v-model="password"></md-input>
       </md-field>
     </div>
       <md-dialog-actions>
